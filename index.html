@@ -7,7 +7,7 @@
 <meta name="description" content="Plano de um mês de anúncios para mais gente de Marechal Cândido Rondon e região conhecer e seguir a Wera Fülber.">
 <meta name="robots" content="noindex,nofollow">
 <meta property="og:title" content="Wera Fülber · Plano de Crescimento no Instagram">
-<meta property="og:description" content="Um mês para Marechal e região conhecerem a sua música. Investimento, etapas e resultados esperados.">
+<meta property="og:description" content="O primeiro passo para a Wera virar referência como influenciadora em Marechal e região: etapas, investimento e 30 ideias de Reels.">
 <meta property="og:type" content="website">
 <meta name="theme-color" content="#8f1424">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%238f1424'/%3E%3Ctext x='16' y='23' font-family='Montserrat,Arial,sans-serif' font-weight='700' font-size='19' text-anchor='middle' fill='%23f0c35a'%3EW%3C/text%3E%3C/svg%3E">
@@ -172,17 +172,10 @@ main{display:grid}
 .tl h3{font-size:17px}
 .tl p{font-size:14.5px;color:var(--ink-2)}
 
-/* resultados */
-.results{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(24px,4vw,48px);align-items:stretch}
-.hero-num{background:repeating-linear-gradient(0deg,rgba(255,255,255,.04) 0 18px,transparent 18px 36px),repeating-linear-gradient(90deg,rgba(255,255,255,.04) 0 18px,transparent 18px 36px),var(--green);color:var(--on-brand);border-radius:var(--r);padding:clamp(26px,4vw,40px);display:grid;gap:14px;align-content:center;position:relative;overflow:hidden}
-.hero-num .kicker{color:var(--gold-hi)}
-.hero-num strong{font-family:var(--f-display);font-weight:700;font-size:clamp(56px,9vw,96px);line-height:.95;color:var(--on-brand)}
-.hero-num strong span{color:var(--gold-hi)}
-.hero-num p{color:var(--on-brand-2);font-size:15.5px}
-.hero-num .grow{display:grid;gap:8px;margin-top:6px}
-.grow-bar{height:10px;border-radius:999px;background:rgba(255,255,255,.1);position:relative;overflow:hidden}
-.grow-bar i{position:absolute;top:0;bottom:0;border-radius:999px}
-.grow-lbl{display:flex;justify-content:space-between;font-size:12.5px;color:var(--on-brand-2);font-family:var(--f-mono)}
+/* projeção */
+.callout.proj{margin:0 0 20px}
+.callout.proj svg{color:var(--kick)}
+.est-head{display:flex;justify-content:space-between;gap:12px;font-size:11.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);padding:14px 0 10px;border-bottom:1px solid var(--line)}
 .est{padding:10px 22px}
 .erow{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:6px 16px;padding:16px 0;border-bottom:1px solid var(--line)}
 .erow:last-child{border-bottom:none}
@@ -191,25 +184,28 @@ main{display:grid}
 .erow .v{font-family:var(--f-mono);font-size:14px;text-align:right;align-self:center;white-space:nowrap}
 .track{grid-column:1 / -1;height:8px;background:var(--paper-2);border-radius:999px;position:relative}
 .track i{position:absolute;top:0;bottom:0;border-radius:999px}
-.fine{font-size:13.5px;color:var(--ink-3);max-width:75ch;margin-top:18px}
 
-/* vídeos */
+/* reels */
+.pillars{display:grid;gap:clamp(30px,4vw,44px)}
+.pillar-head{display:grid;gap:4px;margin-bottom:14px}
+.pillar-head .kicker{color:var(--ink-3)}
+.pillar-head h3{font-size:22px}
+.pillar-head p{color:var(--ink-2);font-size:15px;max-width:70ch}
+.ideas{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.idea-c{padding:16px 18px;display:grid;gap:6px;align-content:start;grid-template-rows:auto auto 1fr auto}
+.idea-c .n{font-weight:800;font-size:13px;color:var(--kick);font-variant-numeric:tabular-nums}
+.idea-c h4{margin:0;font-size:15.5px;font-weight:700;line-height:1.35;text-wrap:balance}
+.idea-c p{font-size:14px;color:var(--ink-2);line-height:1.55}
+.etag{justify-self:start;margin-top:6px;font-size:11.5px;font-weight:700;border-radius:999px;padding:3px 10px;color:var(--ink-2);background:var(--paper-2);display:inline-flex;align-items:center;gap:6px}
+.etag i{width:8px;height:8px;border-radius:50%;background:var(--c)}
+.tips-title{font-size:18px;margin:clamp(30px,4vw,44px) 0 12px}
 .tips{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px 24px;padding:22px 24px}
 .tip{display:grid;grid-template-columns:22px minmax(0,1fr);gap:10px;font-size:15px}
 .tip svg{width:20px;height:20px;color:var(--gold);margin-top:3px}
 
 /* acompanhamento */
-.follow{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,4vw,48px)}
-.report{padding:26px;display:grid;gap:18px;align-content:start}
-.report h3{font-family:var(--f-display);font-weight:700;font-size:26px}
-.kpis{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
-.kpi{background:var(--paper-2);border-radius:10px;padding:12px;display:grid;gap:2px}
-.kpi b{font-size:14px}
-.kpi span{font-size:12.5px;color:var(--ink-3)}
-.promises{display:grid;gap:0}
-.promise{display:grid;grid-template-columns:minmax(0,1fr);gap:4px;padding:16px 0;border-bottom:1px solid var(--line)}
-.promise:first-child{padding-top:0}
-.promise:last-child{border-bottom:none}
+.promises{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.promise{display:grid;gap:4px;padding:18px 20px;align-content:start}
 .promise .if{font-size:14px;color:var(--ink-3)}
 .promise .do{font-size:16px;font-weight:600}
 
@@ -224,7 +220,8 @@ footer .sig{font-family:var(--f-display);font-style:italic;font-size:22px;color:
 
 /* responsivo */
 @media (max-width:960px){
-    .weeks,.results,.follow,.idea{grid-template-columns:minmax(0,1fr)}
+  .weeks,.idea{grid-template-columns:minmax(0,1fr)}
+  .ideas{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
 @media (max-width:760px){
   .stages{grid-template-columns:minmax(0,1fr)}
@@ -239,7 +236,7 @@ footer .sig{font-family:var(--f-display);font-style:italic;font-size:22px;color:
   .jstep{grid-template-columns:44px minmax(0,1fr);padding:14px}
   .jstep .n{width:44px;height:44px;font-size:20px}
   .jstep .pct{grid-column:2;text-align:left}
-  .kpis{grid-template-columns:minmax(0,1fr)}
+  .ideas,.promises{grid-template-columns:minmax(0,1fr)}
   .stage{padding:22px}
   .stage .big{font-size:48px}
 }
@@ -253,8 +250,8 @@ footer .sig{font-family:var(--f-display);font-style:italic;font-size:22px;color:
       <span class="kicker">Plano de crescimento no Instagram</span>
       <span class="chip">Outubro de 2026 · @werafulber_oficial</span>
     </div>
-    <h1><em>Um mês para Marechal conhecer a sua música</em>Wera Fülber</h1>
-    <p class="lede">Wera, este é o plano para que <b>mais gente de Marechal Cândido Rondon e região</b> conheça o seu trabalho, visite o seu perfil e passe a acompanhar você de perto. Aqui está tudo o que vamos fazer, quanto vai custar e o que esperar.</p>
+    <h1><em>O primeiro passo para você virar a influenciadora da região</em>Wera Fülber</h1>
+    <p class="lede">Wera, este é o plano para transformar o seu Instagram em um <b>canal de influência</b>: mais gente de Marechal Cândido Rondon e região conhecendo o seu trabalho, acompanhando o seu dia a dia e conversando com você. Aqui está o que vamos fazer, quanto vai custar e 30 ideias de Reels para você começar.</p>
     <div class="titles">
       <span>Musicista</span><span>Comunicadora</span>
       <span><b>Rainha</b> da 35ª Oktoberfest</span><span><b>Miss Eco</b> MCR 2024</span>
@@ -262,7 +259,7 @@ footer .sig{font-family:var(--f-display);font-style:italic;font-size:22px;color:
     <div class="stats">
       <div class="stat"><strong class="num">R$ 1.000</strong><span>de investimento no mês</span></div>
       <div class="stat"><strong class="num">30 <small>dias</small></strong><span>de anúncios no Instagram e no Facebook</span></div>
-      <div class="stat"><strong class="num">150 <small>a</small> 530</strong><span>novos seguidores esperados</span></div>
+      <div class="stat"><strong class="num">30 <small>ideias</small></strong><span>de Reels prontas para gravar</span></div>
     </div>
   </div>
   <div class="keys" aria-hidden="true"></div>
@@ -334,7 +331,7 @@ footer .sig{font-family:var(--f-display);font-style:italic;font-size:22px;color:
         <div class="tl"><span class="w">S1</span><div><h3>Apresentar</h3><p>As quatro campanhas entram no ar. O foco é colocar você na tela do maior número possível de pessoas.</p></div></div>
         <div class="tl"><span class="w">S2</span><div><h3>Aquecer</h3><p>Primeira leitura dos números. Os vídeos que estiverem indo melhor ganham mais espaço.</p></div></div>
         <div class="tl"><span class="w">S3</span><div><h3>Convidar</h3><p>Já tem bastante gente que viu você. Agora a etapa "Convidar" ganha mais verba.</p></div></div>
-        <div class="tl"><span class="w">S4</span><div><h3>Colher</h3><p>Convites no máximo. No fim da semana você recebe o resumo completo do mês.</p></div></div>
+        <div class="tl"><span class="w">S4</span><div><h3>Colher</h3><p>Convites no máximo. É a fase em que mais gente nova chega ao seu perfil.</p></div></div>
       </div>
     </div>
   </div>
@@ -343,33 +340,27 @@ footer .sig{font-family:var(--f-display);font-style:italic;font-size:22px;color:
 <section class="sec" id="resultados">
   <div class="wrap">
     <div class="sec-head">
-      <span class="kicker">O que esperar</span>
-      <h2>Resultados do primeiro mês</h2>
-      <p>Estes números são uma estimativa com base no custo médio de anúncios em cidades do interior do Paraná. Depois da primeira semana trocamos tudo pelos números reais.</p>
+      <span class="kicker">Projeção</span>
+      <h2>O que pode acontecer no primeiro mês</h2>
+      <p>Uma projeção feita com o custo médio de anúncios em cidades do interior do Paraná, para dar uma ideia do tamanho do alcance que o investimento pode gerar.</p>
     </div>
-    <div class="results">
-      <div class="hero-num">
-        <span class="kicker">Novos seguidores</span>
-        <strong class="num">150 <span style="font-size:.42em;font-style:italic">a</span> 530</strong>
-        <p>Hoje você tem cerca de 4,2 mil seguidores. Isso representa um crescimento de <b style="color:var(--on-brand)">4% a 13%</b> em um único mês.</p>
-        <div class="grow">
-          <div class="grow-bar" id="growBar"></div>
-          <div class="grow-lbl"><span>4,2 mil hoje</span><span>até ≈ 4,7 mil</span></div>
-        </div>
-      </div>
-      <div class="card est" id="est"></div>
+    <div class="callout proj">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+      <p><b>Estes números são uma projeção, não uma promessa.</b> O resultado real depende da qualidade dos vídeos, da época do ano e de como o público reage. Em dezembro, por exemplo, os anúncios ficam mais caros por causa do Natal.</p>
     </div>
-    <p class="fine">O resultado real depende principalmente da qualidade dos vídeos e da época do ano. Em dezembro, por exemplo, os anúncios ficam mais caros por causa do Natal. Não existe garantia de número exato. O que garantimos é acompanhar de perto e ajustar toda semana.</p>
+    <div class="card est" id="est"></div>
   </div>
 </section>
 
-<section class="sec" id="videos">
+<section class="sec" id="reels">
   <div class="wrap">
     <div class="sec-head">
       <span class="kicker">A sua parte</span>
-      <h2>Os vídeos que vão fazer isso acontecer</h2>
-      <p>Os anúncios usam publicações do seu próprio perfil. O ideal são de 2 a 3 vídeos por etapa, para a gente testar qual funciona melhor. Estas dicas fazem toda a diferença:</p>
+      <h2>30 ideias de Reels para você virar referência</h2>
+      <p>Influência se constrói com presença e constância. A sugestão é publicar de 3 a 4 Reels por semana, misturando os cinco temas abaixo. Os vídeos que forem melhor no orgânico viram anúncio. Cada ideia mostra em qual etapa do plano ela funciona melhor.</p>
     </div>
+    <div class="pillars" id="pillars"></div>
+    <h3 class="tips-title">Vale para todos os vídeos</h3>
     <div class="card tips">
       <div class="tip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span><b>Seu rosto nos 2 primeiros segundos.</b> É ele que faz a pessoa parar de rolar a tela.</span></div>
       <div class="tip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span><b>Som do acordeom logo de cara.</b> É a sua marca registrada.</span></div>
@@ -383,25 +374,14 @@ footer .sig{font-family:var(--f-display);font-style:italic;font-size:22px;color:
   <div class="wrap">
     <div class="sec-head">
       <span class="kicker">Acompanhamento</span>
-      <h2>Você sempre sabe como está indo</h2>
-      <p>Não é ligar e esquecer. Toda semana a gente olha os números, ajusta o que precisa e te conta o que mudou.</p>
+      <h2>Ajustes ao longo do mês</h2>
+      <p>Não é ligar e esquecer. A gente acompanha os números das campanhas de perto e muda o que for preciso para o investimento render mais.</p>
     </div>
-    <div class="follow">
-      <div class="card report">
-        <h3>Resumo semanal no seu WhatsApp</h3>
-        <p style="color:var(--ink-2);font-size:15.5px">Toda semana você recebe um resumo curto e fácil de ler com os três números que importam:</p>
-        <div class="kpis">
-          <div class="kpi"><b>Pessoas alcançadas</b><span>quantos viram você</span></div>
-          <div class="kpi"><b>Visitas ao perfil</b><span>quantos foram conhecer</span></div>
-          <div class="kpi"><b>Novos seguidores</b><span>quantos ficaram</span></div>
-        </div>
-      </div>
-      <div class="promises">
-        <div class="promise"><span class="if">Se um vídeo não estiver indo bem</span><span class="do">A gente troca por outro e testa de novo.</span></div>
-        <div class="promise"><span class="if">Se as mesmas pessoas estiverem vendo o anúncio demais</span><span class="do">Diminuímos a frequência para não cansar ninguém.</span></div>
-        <div class="promise"><span class="if">Se muita gente visitar e pouca seguir</span><span class="do">Revisamos juntos a sua bio, os destaques e os posts fixados.</span></div>
-        <div class="promise"><span class="if">Se uma etapa estiver rendendo muito mais que as outras</span><span class="do">Ela recebe parte da verba das outras, sem aumentar o total.</span></div>
-      </div>
+    <div class="promises">
+      <div class="card promise"><span class="if">Se um vídeo não estiver indo bem</span><span class="do">A gente troca por outro e testa de novo.</span></div>
+      <div class="card promise"><span class="if">Se as mesmas pessoas estiverem vendo o anúncio demais</span><span class="do">Diminuímos a frequência para não cansar ninguém.</span></div>
+      <div class="card promise"><span class="if">Se muita gente visitar e pouca seguir</span><span class="do">Revisamos juntos a sua bio, os destaques e os posts fixados.</span></div>
+      <div class="card promise"><span class="if">Se uma etapa estiver rendendo muito mais que as outras</span><span class="do">Ela recebe parte da verba das outras, sem aumentar o total.</span></div>
     </div>
   </div>
 </section>
@@ -555,19 +535,59 @@ let rzT;addEventListener("resize",()=>{clearTimeout(rzT);rzT=setTimeout(drawWeek
     {t:"Pessoas novas da região alcançadas",s:"Encantar",v:p2r,c:"s2",m:40000},
     {t:"Curtidas, comentários e salvamentos",s:"Encantar",v:p2i,c:"s2",m:8000},
     {t:"Visitas ao seu perfil",s:"Convidar",v:vis,c:"s3",m:1600},
-    {t:"Seguidores e fãs que vão ver seus posts",s:"Manter perto",v:p1,c:"s4",m:12000}
+    {t:"Pessoas que já te acompanham alcançadas",s:"Manter perto",v:p1,c:"s4",m:12000}
   ];
-  document.getElementById("est").innerHTML=rows.map(r=>{
+  document.getElementById("est").innerHTML=`<div class="est-head"><span>Indicador</span><span>Projeção (faixa)</span></div>`+rows.map(r=>{
     const l=r.v[0]/r.m*100,w=Math.min(100-l,(r.v[1]-r.v[0])/r.m*100);
     return `<div class="erow"><div class="t">${r.t}<small>${r.s}</small></div><div class="v num">${k(r.v[0])} a ${k(r.v[1])}</div>
       <div class="track"><i style="left:${l}%;width:${w}%;background:var(--${r.c})" data-t="${r.t}: entre ${k(r.v[0])} e ${k(r.v[1])}"></i></div></div>`;}).join("");
   document.querySelectorAll(".track i").forEach(e=>bindTip(e,e.dataset.t));
-  // barra de crescimento: 4.187 -> +150 a +530, escala 0 a 4.800
-  const g=document.getElementById("growBar"),base=4187,sc=4800;
-  g.innerHTML=`<i style="left:0;width:${base/sc*100}%;background:rgba(255,255,255,.35)"></i><i style="left:${base/sc*100}%;width:${530/sc*100}%;background:var(--gold-hi)"></i>`;
-  bindTip(g,"Hoje: ≈ 4,2 mil · Meta: + 150 a 530 seguidores");
 })();
 
+// 30 ideias de Reels (etapa: s1 Ser vista, s2 Encantar, s3 Convidar, s4 Manter perto)
+const PIL=[
+ {t:"Música e acordeom",d:"O seu diferencial. É o que faz alguém parar de rolar a tela e lembrar de você.",i:[
+  ["Adivinha a música","Toque 5 segundos de uma música conhecida e desafie a galera a acertar nos comentários.","s2"],
+  ["Hit do momento no acordeom","Aquela música que está em todo lugar, na sua versão com acordeom.","s2"],
+  ["Pedido dos seguidores","Toque a música mais pedida nos comentários do vídeo anterior e marque quem pediu.","s4"],
+  ["Curiosidades do acordeom","Quanto pesa, quantos botões tem, quanto tempo leva para aprender. Fatos rápidos que surpreendem.","s1"],
+  ["Primeira vez × hoje","Um vídeo antigo seu tocando ao lado de um vídeo de agora. Mostra a evolução.","s3"],
+  ["Dueto com músico da região","Uma música a quatro mãos com outro artista de Marechal. Um apresenta o outro ao público.","s2"]]},
+ {t:"Rainha da Oktoberfest e cultura alemã",d:"Um título que pouca gente tem. Transforme em conteúdo o ano inteiro, não só em outubro.",i:[
+  ["Um dia de rainha","Bastidores de um evento oficial: preparação, chegada, palco e o depois.","s1"],
+  ["Trança, coroa e traje em 30 segundos","Time-lapse da arrumação completa para um evento.","s2"],
+  ["O segredo do laço do dirndl","O lado em que o laço é amarrado tem significado. Explique de um jeito divertido.","s2"],
+  ["Palavras em alemão que todo rondonense fala","Expressões do dia a dia da região, com o significado e um toque de humor.","s1"],
+  ["Receita típica com a família","Cuca, chucrute ou outra receita da família, feita junto com a mãe ou a avó.","s4"],
+  ["Contagem para a próxima festa","Série curta antecipando a próxima Oktoberfest ou festa típica da região.","s4"]]},
+ {t:"Bastidores e vida real",d:"Influenciadora é quem as pessoas sentem que conhecem. Mostre a Wera fora do palco.",i:[
+  ["Um dia comigo","Faculdade de jornalismo, ensaio, evento: o seu dia em 30 segundos.","s4"],
+  ["Erros de gravação da semana","Os tropeços e risadas que não entraram nos vídeos. Gera muita proximidade.","s4"],
+  ["O que tem na minha bolsa de apresentação","Os itens que você sempre leva para tocar ou apresentar.","s4"],
+  ["Respondendo perguntas","Abra uma caixinha nos Stories e responda as melhores em Reels.","s4"],
+  ["Antes de subir ao palco","O ritual de preparação: aquecimento, nervosismo, oração, o que for seu.","s2"],
+  ["Como tudo começou","A sua história com a música, contada em primeira pessoa e com fotos antigas.","s3"]]},
+ {t:"Comunicadora de Marechal",d:"Junte a comunicação e o jornalismo com a cidade. Assim você vira a voz de Marechal no Instagram.",i:[
+  ["Marechal em 30 segundos","A agenda de eventos da semana na cidade, apresentada por você.","s1"],
+  ["Entrevista relâmpago","Três perguntas rápidas para gente da cidade, na rua ou em um evento.","s1"],
+  ["Lugares que você precisa conhecer","Cantos de Marechal e região que pouca gente conhece ou que merecem visita.","s1"],
+  ["Testando o comércio local","Um café, uma lanchonete, uma loja da cidade. Abre portas para parcerias pagas.","s2"],
+  ["Notícia boa da região","Uma conquista ou história bonita de Marechal contada no seu estilo de comunicadora.","s1"],
+  ["Por trás da festa","Tour pelos bastidores de um evento antes de abrir ao público.","s2"]]},
+ {t:"Tendências e conexão",d:"Entrar nas conversas do momento e chamar as pessoas para perto de você.",i:[
+  ["Trend do momento com acordeom","Pegue o áudio ou a dança que está em alta e adapte com o seu instrumento.","s2"],
+  ["POV de rainha","“POV: você é a rainha da Oktoberfest e…”. Humor com situações reais.","s2"],
+  ["Expectativa × realidade","A vida de musicista e rainha como as pessoas imaginam e como ela é de verdade.","s2"],
+  ["Reagindo a comentários","Responda em vídeo comentários engraçados, como “acordeom é coisa de vô”.","s4"],
+  ["Collab com influenciadora da região","Um vídeo em parceria com outra criadora ou miss da região. Os públicos se misturam.","s3"],
+  ["Três motivos para me seguir","Um convite direto e simpático, mostrando o que a pessoa vai encontrar no seu perfil.","s3"]]}
+];
+(function(){
+  let n=0;const et=Object.fromEntries(S.map(x=>[x.k,x.nome]));
+  document.getElementById("pillars").innerHTML=PIL.map((p,pi)=>`
+   <div class="pillar"><div class="pillar-head"><span class="kicker">Tema ${pi+1}</span><h3>${p.t}</h3><p>${p.d}</p></div>
+    <div class="ideas">${p.i.map(([t,d,e])=>`<div class="card idea-c"><span class="n">#${String(++n).padStart(2,"0")}</span><h4>${t}</h4><p>${d}</p><span class="etag" style="--c:var(--${e})"><i></i>${et[e]}</span></div>`).join("")}</div></div>`).join("");
+})();
 </script>
 </body>
 </html>
