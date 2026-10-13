@@ -136,8 +136,8 @@ main{display:grid}
 .donut-box path{cursor:default;transition:opacity .15s}
 .donut-box path:hover{opacity:.82}
 .donut-c{position:absolute;inset:0;display:grid;place-content:center;text-align:center;pointer-events:none}
-.donut-c strong{font-family:var(--f-display);font-weight:500;font-size:42px;line-height:1}
-.donut-c span{font-size:13px;color:var(--ink-3);margin-top:6px}
+.donut-c strong{font-family:var(--f-display);font-weight:500;font-size:clamp(26px,7vw,36px);line-height:1}
+.donut-c span{font-size:12.5px;color:var(--ink-3);margin-top:6px;max-width:15ch;margin-inline:auto;line-height:1.35}
 .split{display:grid;gap:18px}
 .srow{display:grid;gap:8px}
 .srow-top{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
@@ -152,9 +152,9 @@ main{display:grid}
 .weeks{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:clamp(24px,4vw,48px);align-items:start}
 .chart{padding:22px 18px 12px}
 .chart svg{display:block;width:100%;height:auto}
-.chart text{font-family:var(--f-body);font-size:12px;fill:var(--ink-3)}
-.chart text.v{fill:var(--ink-2);font-family:var(--f-mono);font-size:11.5px}
-.chart text.wk{fill:var(--ink);font-weight:700;font-size:13px}
+.chart text{font-family:var(--f-body);font-size:15px;fill:var(--ink-3)}
+.chart text.v{fill:var(--ink-2);font-family:var(--f-mono);font-size:15px}
+.chart text.wk{fill:var(--ink);font-weight:700;font-size:16px}
 .chart .grid{stroke:var(--line)}
 .chart rect.seg{stroke:var(--paper);stroke-width:2}
 .legend{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:13px;color:var(--ink-2);padding:0 6px 10px}
@@ -273,7 +273,7 @@ footer .sig{font-family:var(--f-display);font-style:italic;font-size:22px;color:
     <div class="stats">
       <div class="stat"><strong class="num">R$ 1.000</strong><span>de investimento no mês</span></div>
       <div class="stat"><strong class="num">30 <small>dias</small></strong><span>de anúncios no Instagram e no Facebook</span></div>
-      <div class="stat"><strong class="num">+150 <small>a</small> 530</strong><span>novos seguidores esperados</span></div>
+      <div class="stat"><strong class="num">150 <small>a</small> 530</strong><span>novos seguidores esperados</span></div>
     </div>
   </div>
   <div class="bellows" aria-hidden="true"></div>
@@ -318,7 +318,7 @@ footer .sig{font-family:var(--f-display);font-style:italic;font-size:22px;color:
     <div class="invest">
       <div class="donut-box">
         <svg id="donut" viewBox="0 0 220 220" role="img" aria-label="Divisão do investimento entre as quatro etapas"></svg>
-        <div class="donut-c"><strong class="num">R$ 1.000</strong><span>por mês · ≈ R$ 33 por dia</span></div>
+        <div class="donut-c"><strong class="num">R$ 1.000</strong><span>por mês, cerca de R$ 33 por dia</span></div>
       </div>
       <div class="split">
         <div id="split" class="split"></div>
@@ -360,7 +360,7 @@ footer .sig{font-family:var(--f-display);font-style:italic;font-size:22px;color:
     <div class="results">
       <div class="hero-num">
         <span class="kicker">Novos seguidores</span>
-        <strong class="num">150<span>–</span>530</strong>
+        <strong class="num">150 <span style="font-size:.42em;font-style:italic">a</span> 530</strong>
         <p>Hoje você tem cerca de 4,2 mil seguidores. Isso representa um crescimento de <b style="color:var(--on-navy)">4% a 13%</b> em um único mês.</p>
         <div class="grow">
           <div class="grow-bar" id="growBar"></div>
@@ -542,7 +542,7 @@ document.getElementById("stages").innerHTML=S.map((s,i)=>`
 
 // semanas
 (function(){
-  const svg=document.getElementById("weekChart"),W=640,H=330,L=58,Rr=10,T=10,Bt=36,ih=H-T-Bt,iw=W-L-Rr,max=250;
+  const svg=document.getElementById("weekChart"),W=640,H=330,L=74,Rr=10,T=10,Bt=36,ih=H-T-Bt,iw=W-L-Rr,max=250;
   const y=v=>T+ih-v/max*ih;
   const mk=(t,at,tx)=>{const e=document.createElementNS(NS,t);for(const a in at)e.setAttribute(a,at[a]);if(tx!=null)e.textContent=tx;svg.appendChild(e);return e;};
   for(let v=0;v<=max;v+=50){mk("line",{x1:L,x2:W-Rr,y1:y(v),y2:y(v),class:"grid"});mk("text",{x:L-10,y:y(v)+4,"text-anchor":"end"},brl(v));}
