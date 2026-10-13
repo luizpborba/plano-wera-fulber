@@ -188,14 +188,6 @@ main{display:grid}
 .fine{font-size:13.5px;color:var(--ink-3);max-width:75ch;margin-top:18px}
 
 /* vídeos */
-.videos{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
-.vid{padding:20px;display:grid;gap:12px;align-content:start}
-.phone{aspect-ratio:9/14;max-width:100%;border-radius:12px;background:linear-gradient(160deg,var(--paper-2),var(--bg));border:1px solid var(--line);position:relative;overflow:hidden;display:grid;place-items:center}
-.phone::after{content:"";position:absolute;left:12px;right:12px;bottom:14px;height:6px;border-radius:999px;background:var(--line);box-shadow:0 -12px 0 -1px var(--line)}
-.phone svg{width:40%;height:auto;color:var(--c)}
-.phone .tagv{position:absolute;top:10px;left:10px;font-family:var(--f-mono);font-size:11px;background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:2px 7px;color:var(--ink-2)}
-.vid h3{font-size:17px}
-.vid p{font-size:14.5px;color:var(--ink-2)}
 .tips{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px 24px;padding:22px 24px}
 .tip{display:grid;grid-template-columns:22px minmax(0,1fr);gap:10px;font-size:15px}
 .tip svg{width:20px;height:20px;color:var(--gold);margin-top:3px}
@@ -215,12 +207,6 @@ main{display:grid}
 .promise .if{font-size:14px;color:var(--ink-3)}
 .promise .do{font-size:16px;font-weight:600}
 
-/* próximos passos */
-.next{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;counter-reset:s}
-.nstep{padding:22px;display:grid;gap:10px;align-content:start}
-.nstep .n{font-family:var(--f-display);font-size:44px;line-height:1;color:var(--gold)}
-.nstep h3{font-size:17px}
-.nstep p{font-size:14.5px;color:var(--ink-2)}
 
 footer{background:var(--green);color:var(--on-brand-2);font-size:14px}
 footer .wrap{padding-block:36px calc(36px + env(safe-area-inset-bottom,0px));display:flex;flex-wrap:wrap;gap:12px 32px;justify-content:space-between;align-items:center}
@@ -232,8 +218,7 @@ footer .sig{font-family:var(--f-display);font-style:italic;font-size:22px;color:
 
 /* responsivo */
 @media (max-width:960px){
-  .videos,.next{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .weeks,.results,.follow,.idea{grid-template-columns:minmax(0,1fr)}
+    .weeks,.results,.follow,.idea{grid-template-columns:minmax(0,1fr)}
 }
 @media (max-width:760px){
   .stages{grid-template-columns:minmax(0,1fr)}
@@ -245,14 +230,12 @@ footer .sig{font-family:var(--f-display);font-style:italic;font-size:22px;color:
   .stats{grid-template-columns:minmax(0,1fr)}
   .stat,.stat + .stat{padding:16px 0;border-left:none;border-bottom:1px solid rgba(255,255,255,.1)}
   .stat:last-child{border-bottom:none}
-  .videos,.next{grid-template-columns:minmax(0,1fr)}
   .jstep{grid-template-columns:44px minmax(0,1fr);padding:14px}
   .jstep .n{width:44px;height:44px;font-size:20px}
   .jstep .pct{grid-column:2;text-align:left}
   .kpis{grid-template-columns:minmax(0,1fr)}
   .stage{padding:22px}
   .stage .big{font-size:48px}
-  .phone{aspect-ratio:16/10}
 }
 </style>
 </head>
@@ -412,21 +395,6 @@ footer .sig{font-family:var(--f-display);font-style:italic;font-size:22px;color:
         <div class="promise"><span class="if">Se muita gente visitar e pouca seguir</span><span class="do">Revisamos juntos a sua bio, os destaques e os posts fixados.</span></div>
         <div class="promise"><span class="if">Se uma etapa estiver rendendo muito mais que as outras</span><span class="do">Ela recebe parte da verba das outras, sem aumentar o total.</span></div>
       </div>
-    </div>
-  </div>
-</section>
-
-<section class="sec" id="passos">
-  <div class="wrap">
-    <div class="sec-head">
-      <span class="kicker">Próximos passos</span>
-      <h2>Como a gente começa</h2>
-    </div>
-    <div class="next">
-      <div class="card nstep"><span class="n">1</span><h3>Você aprova o plano</h3><p>Se quiser mudar alguma coisa, é só falar. Ajustamos antes de começar.</p></div>
-      <div class="card nstep"><span class="n">2</span><h3>Escolhemos os vídeos</h3><p>Separamos juntos os vídeos do seu perfil e o que vale gravar de novo.</p></div>
-      <div class="card nstep"><span class="n">3</span><h3>Campanhas no ar</h3><p>Configuramos tudo e as quatro etapas começam a rodar no mesmo dia.</p></div>
-      <div class="card nstep"><span class="n">4</span><h3>Primeiro resumo</h3><p>Depois de 7 dias você recebe os primeiros números reais.</p></div>
     </div>
   </div>
 </section>
