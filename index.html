@@ -66,15 +66,15 @@ h3{font-weight:700;line-height:1.3;text-wrap:balance}
 .cover .wrap{padding-block:clamp(40px,7vw,84px) clamp(36px,6vw,64px);display:grid;gap:clamp(28px,4vw,44px);position:relative}
 .cover-top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
 .cover-top .kicker{color:var(--gold-hi)}
-.cover h1 em{color:var(--gold-hi)}
 .chip{font-size:12.5px;color:var(--on-brand-2);border:1px solid rgba(227,176,75,.35);border-radius:999px;padding:4px 12px;white-space:nowrap}
 .cover h1{font-size:clamp(46px,10vw,112px);font-weight:800;color:var(--on-brand)}
-.cover h1 em{display:block;font-style:italic;font-weight:400;font-size:.36em;color:var(--gold-hi);letter-spacing:0;margin-bottom:.15em}
 .cover .lede{font-size:clamp(17px,2.1vw,20px);color:var(--on-brand-2);max-width:58ch;line-height:1.6}
 .cover .lede b{color:var(--on-brand);font-weight:600}
-.titles{display:flex;flex-wrap:wrap;gap:8px}
-.titles span{font-size:13px;color:var(--on-brand);background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:999px;padding:4px 12px}
-.titles span b{color:var(--gold-hi);font-weight:600}
+.titles{display:flex;flex-wrap:nowrap;align-items:stretch;border-bottom:1px solid rgba(240,195,90,.55);overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch;max-width:max-content}
+.titles::-webkit-scrollbar{display:none}
+.titles span{flex:none;white-space:nowrap;font-size:clamp(12.5px,1.5vw,15px);font-weight:500;color:var(--on-brand);padding:2px 18px 10px;border-right:1px solid rgba(240,195,90,.55)}
+.titles span:first-child{padding-left:0}
+.titles span b{color:var(--gold-hi);font-weight:700}
 .stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid rgba(227,176,75,.3)}
 .stat{padding:20px 20px 0 0;display:grid;gap:4px;min-width:0}
 .stat + .stat{padding-left:20px;border-left:1px solid rgba(255,255,255,.1)}
@@ -198,6 +198,17 @@ main{display:grid}
 .idea-c p{font-size:14px;color:var(--ink-2);line-height:1.55}
 .etag{justify-self:start;margin-top:6px;font-size:11.5px;font-weight:700;border-radius:999px;padding:3px 10px;color:var(--ink-2);background:var(--paper-2);display:inline-flex;align-items:center;gap:6px}
 .etag i{width:8px;height:8px;border-radius:50%;background:var(--c)}
+.dots{display:none}
+@media (min-width:761px) and (max-width:960px){.ideas{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:760px){
+  .ideas{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:82%;overflow-x:auto;scroll-snap-type:x mandatory;margin-inline:-20px;padding:2px 20px 6px;scroll-padding-inline:20px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  .ideas::-webkit-scrollbar{display:none}
+  .idea-c{scroll-snap-align:start}
+  .dots{display:flex;align-items:center;gap:6px;margin-top:12px}
+  .dots i{width:7px;height:7px;border-radius:999px;background:var(--line);transition:width .2s,background .2s}
+  .dots i.on{width:20px;background:var(--kick)}
+  .dots span{margin-left:auto;font-size:12.5px;color:var(--ink-3)}
+}
 .tips-title{font-size:18px;margin:clamp(30px,4vw,44px) 0 12px}
 .tips{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px 24px;padding:22px 24px}
 .tip{display:grid;grid-template-columns:22px minmax(0,1fr);gap:10px;font-size:15px}
@@ -221,7 +232,6 @@ footer .sig{font-family:var(--f-display);font-style:italic;font-size:22px;color:
 /* responsivo */
 @media (max-width:960px){
   .weeks,.idea{grid-template-columns:minmax(0,1fr)}
-  .ideas{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
 @media (max-width:760px){
   .stages{grid-template-columns:minmax(0,1fr)}
@@ -236,7 +246,7 @@ footer .sig{font-family:var(--f-display);font-style:italic;font-size:22px;color:
   .jstep{grid-template-columns:44px minmax(0,1fr);padding:14px}
   .jstep .n{width:44px;height:44px;font-size:20px}
   .jstep .pct{grid-column:2;text-align:left}
-  .ideas,.promises{grid-template-columns:minmax(0,1fr)}
+  .promises{grid-template-columns:minmax(0,1fr)}
   .stage{padding:22px}
   .stage .big{font-size:48px}
 }
@@ -250,7 +260,7 @@ footer .sig{font-family:var(--f-display);font-style:italic;font-size:22px;color:
       <span class="kicker">Plano de crescimento no Instagram</span>
       <span class="chip">Outubro de 2026 · @werafulber_oficial</span>
     </div>
-    <h1><em>O primeiro passo para você virar a influenciadora da região</em>Wera Fülber</h1>
+    <h1>Wera Fülber</h1>
     <p class="lede">Wera, este é o plano para transformar o seu Instagram em um <b>canal de influência</b>: mais gente de Marechal Cândido Rondon e região conhecendo o seu trabalho, acompanhando o seu dia a dia e conversando com você. Aqui está o que vamos fazer, quanto vai custar e 30 ideias de Reels para você começar.</p>
     <div class="titles">
       <span>Musicista</span><span>Comunicadora</span>
@@ -586,7 +596,13 @@ const PIL=[
   let n=0;const et=Object.fromEntries(S.map(x=>[x.k,x.nome]));
   document.getElementById("pillars").innerHTML=PIL.map((p,pi)=>`
    <div class="pillar"><div class="pillar-head"><span class="kicker">Tema ${pi+1}</span><h3>${p.t}</h3><p>${p.d}</p></div>
-    <div class="ideas">${p.i.map(([t,d,e])=>`<div class="card idea-c"><span class="n">#${String(++n).padStart(2,"0")}</span><h4>${t}</h4><p>${d}</p><span class="etag" style="--c:var(--${e})"><i></i>${et[e]}</span></div>`).join("")}</div></div>`).join("");
+    <div class="ideas" data-p="${pi}">${p.i.map(([t,d,e])=>`<div class="card idea-c"><span class="n">#${String(++n).padStart(2,"0")}</span><h4>${t}</h4><p>${d}</p><span class="etag" style="--c:var(--${e})"><i></i>${et[e]}</span></div>`).join("")}</div><div class="dots" aria-hidden="true">${p.i.map((_,j)=>`<i${j?"":' class="on"'}></i>`).join("")}<span>Arraste para o lado →</span></div></div>`).join("");
+  document.querySelectorAll(".ideas").forEach(row=>{
+    const dots=[...row.nextElementSibling.querySelectorAll("i")];
+    row.addEventListener("scroll",()=>{const c=row.children[0];if(!c)return;
+      const step=c.getBoundingClientRect().width+12,idx=Math.min(dots.length-1,Math.round(row.scrollLeft/step));
+      dots.forEach((d,j)=>d.classList.toggle("on",j===idx));},{passive:true});
+  });
 })();
 </script>
 </body>
