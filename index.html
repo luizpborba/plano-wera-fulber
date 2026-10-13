@@ -75,6 +75,12 @@ h3{font-weight:700;line-height:1.3;text-wrap:balance}
 .titles span{flex:none;white-space:nowrap;font-size:clamp(12.5px,1.5vw,15px);font-weight:500;color:var(--on-brand);padding:2px 18px 10px;border-right:1px solid rgba(240,195,90,.55)}
 .titles span:first-child{padding-left:0}
 .titles span b{color:var(--gold-hi);font-weight:700}
+.titles.ticker{max-width:100%;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
+.titles .tk{display:flex;flex:none}
+.titles.ticker .tk{animation:tick 24s linear infinite}
+.titles.ticker span:first-child{padding-left:18px}
+@keyframes tick{to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.titles.ticker{overflow-x:auto}.titles.ticker .tk{animation:none}}
 .stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid rgba(227,176,75,.3)}
 .stat{padding:20px 20px 0 0;display:grid;gap:4px;min-width:0}
 .stat + .stat{padding-left:20px;border-left:1px solid rgba(255,255,255,.1)}
@@ -186,7 +192,8 @@ main{display:grid}
 .track i{position:absolute;top:0;bottom:0;border-radius:999px}
 
 /* reels */
-.pillars{display:grid;gap:clamp(30px,4vw,44px)}
+.pillars{display:grid;grid-template-columns:minmax(0,1fr);gap:clamp(30px,4vw,44px)}
+.pillar{min-width:0}
 .pillar-head{display:grid;gap:4px;margin-bottom:14px}
 .pillar-head .kicker{color:var(--ink-3)}
 .pillar-head h3{font-size:22px}
@@ -262,7 +269,7 @@ footer .sig{font-family:var(--f-display);font-style:italic;font-size:22px;color:
     </div>
     <h1>Wera Fülber</h1>
     <p class="lede">Wera, este é o plano para transformar o seu Instagram em um <b>canal de influência</b>: mais gente de Marechal Cândido Rondon e região conhecendo o seu trabalho, acompanhando o seu dia a dia e conversando com você. Aqui está o que vamos fazer, quanto vai custar e 30 ideias de Reels para você começar.</p>
-    <div class="titles">
+    <div class="titles" id="titles">
       <span>Musicista</span><span>Comunicadora</span>
       <span><b>Rainha</b> da 35ª Oktoberfest</span><span><b>Miss Eco</b> MCR 2024</span>
     </div>
@@ -504,6 +511,15 @@ document.getElementById("stages").innerHTML=S.map((s,i)=>`
     <div class="sbar"><i style="width:${s.share/.35*100}%;background:var(--${s.k})"></i></div></div>`).join("");
 })();
 
+// títulos: uma linha; se não couber, vira letreiro
+(function(){
+  const box=document.getElementById("titles"),orig=box.innerHTML;
+  function fit(){
+    box.classList.remove("ticker");box.innerHTML=`<div class="tk">${orig}</div>`;
+    if(box.scrollWidth>box.clientWidth+1){box.classList.add("ticker");box.innerHTML=`<div class="tk">${orig}${orig}</div>`;}
+  }
+  fit();let t;addEventListener("resize",()=>{clearTimeout(t);t=setTimeout(fit,150);});
+})();
 // semanas (redesenha na largura real; no celular os valores vão para a tabela)
 function drawWeeks(){
   const svg=document.getElementById("weekChart");svg.innerHTML="";
